@@ -13,4 +13,4 @@ def Newton_Raphson(f:Callable, df:Callable, x0:float, tol:float=1e-9, max_iter:i
         if abs(fx) < tol:
             return x
         x -= fx / df(x) 
-    raise ValueError(f"ERR : In Newton_Raphson, impossible to converge after {max_iter} iterations.")
+    raise RuntimeError(f"ERR : In Newton_Raphson, impossible to converge after {max_iter} iterations.")
